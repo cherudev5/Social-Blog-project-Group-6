@@ -1,13 +1,13 @@
 import React from 'react';
+import ArticleList from './ArticleList';
 
-function ArticlesPage (){
-  // Fetch and render articles from your backend or a data source
+function ArticlesPage() {
   return (
     <div>
-      <h2>All Articles</h2>
-      {/* Render articles here */}
+      <h1>All Articles</h1>
+      <ArticleList />
     </div>
   );
-};
+}
 
 export default ArticlesPage;
