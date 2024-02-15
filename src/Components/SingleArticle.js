@@ -11,7 +11,7 @@ const ArticleDetail = () => {
 
   useEffect(() => {
     // Fetch specific article from db.json using the fetch API
-    fetch(`http://localhost:3000/Articles/${id}`) // Replace with your actual API endpoint
+    fetch(`http://localhost:3000/Articles/${id}`) 
       .then(response => response.json())
       .then(data => {
         setArticle(data);
@@ -22,8 +22,8 @@ const ArticleDetail = () => {
   }, [id]);
 
   const handleLike = () => {
-    // Update likes in the state and also in the database
-    const updatedLikes = likes + 1; // Assuming one like per click
+   
+    const updatedLikes = likes + 1; 
     setLikes(updatedLikes);
     fetch(`http://localhost:3000/Articles/${id}`, {
       method: 'PATCH',
@@ -39,11 +39,10 @@ const ArticleDetail = () => {
       .catch(error => console.error('Error updating likes:', error));
   };
 
-    // Here you can send a request to update the likes in the database if needed
-  
+   
 
   const handleCommentSubmit = () => {
-    // Update comments in the state and also in the database
+    
     const updatedComments = [...comments, { id: comments.length + 1, text: newComment }];
     setComments(updatedComments); 
     fetch(`http://localhost:3000/Articles/${id}/comments`, {
@@ -59,7 +58,7 @@ const ArticleDetail = () => {
       .then(data => console.log('Comment posted to the server:', data))
       .catch(error => console.error('Error posting comment:', error));
   
-    // Clear the comment input
+  
     setNewComment('');
   };
 
@@ -73,7 +72,7 @@ const ArticleDetail = () => {
       <button className="btn" onClick={handleLike}>Like</button>
       <p>Likes: {likes}</p>
 
-      {/* Comment Section */}
+     
       <h3>Comments</h3>
       <ul>
         {comments.map(comment => (

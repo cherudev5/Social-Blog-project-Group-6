@@ -7,7 +7,7 @@ function Footer(){
       <div>
         <a href="https://facebook.com">Facebook</a>
         <a href="https://twitter.com">Twitter</a>
-        {/* Add more social media links as needed */}
+       
       </div>
     </footer>
   );

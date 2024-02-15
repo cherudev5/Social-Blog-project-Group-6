@@ -1,4 +1,3 @@
-// Writers.js
 import React, { useState } from 'react';
 
 const Writers = () => {
@@ -32,7 +31,7 @@ const Writers = () => {
       .then(response => response.json())
       .then(data => {
         console.log('Blog posted to the server:', data);
-        // Optionally, you can redirect to the newly created blog's page
+        
       })
       .catch(error => console.error('Error posting blog:', error));
   };

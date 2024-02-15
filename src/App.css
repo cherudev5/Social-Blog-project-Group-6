@@ -38,7 +38,7 @@
 }
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(1, 1fr); /* 4 columns with equal width */
+  grid-template-columns: repeat(1, 1fr); 
   gap: 10px; ;
   margin-left: 40px;
   margin-right: 40px;
@@ -93,15 +93,13 @@ border: solid 2px #0066cc;
 
 .comment-box {
   width: 100%;
-  max-width: 600px; /* Adjust the maximum width as needed */
-  margin: 20px auto; /* Center the comment box horizontally with some top margin */
-
-  /* Style the textarea */
+  max-width: 600px; 
+  margin: 20px auto; 
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 10px;
   font-size: 14px;
-  resize: vertical; /* Allow vertical resizing */
+  resize: vertical; 
 }
 .form1 {
   max-width: 400px;
